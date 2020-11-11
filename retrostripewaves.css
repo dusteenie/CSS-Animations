@@ -1,0 +1,61 @@
+<style>
+/*
+ * The following animation creates a 'retro' annimation of 'waves'
+ * in a striped gradient within a div.
+ *
+ * @author: Sarah Stepak
+ * @since: 11.10.2020
+ */
+	#animation-name{
+	    border-radius: 20px;
+	    width: 75%;
+	    height: 50%;
+	    margin:  50 auto;
+	    background: repeating-linear-gradient(
+				45deg,
+				#93D4DD 0px, /*middle color*/
+	      #E0EFE6  40px, /*bottom color*/
+	      #C3DCDF 80px /*top color*/
+	    );
+	    opacity: 75%;
+	    position: absolute;
+
+  		top: 25%;
+  		left: 50%;
+  		transform: translate(-50%, -50%);
+
+			animation: your-animation-name 3s cubic-bezier(0.1, 0.7, 0.3,.15) infinite;
+	}
+
+	@keyframes your-animation-name {
+
+		25%{
+			background: repeating-linear-gradient(
+				45deg,
+				#C3DCDF 0px, /*middle color*/
+				#E0EFE6 40px, /*bottom color*/
+				#93D4DD 80px /*top color*/
+	    );
+		}
+
+		50%{
+			background: repeating-linear-gradient(
+				45deg,
+				#E0EFE6 0px, /*middle color*/
+				#C3DCDF  40px, /*bottom color*/
+				#93D4DD 80px /*top color*/
+				);
+		}
+
+		75%{
+			background: repeating-linear-gradient(
+				45deg,
+				#C3DCDF 0px, /*middle color*/
+				#93D4DD  40px, /*bottom color*/
+				#E0EFE6 80px /*top color*/
+				);
+		}
+
+	}
+
+</style>
